@@ -11,8 +11,8 @@ export default {
     var barChart = new this.$_Chart(this.$refs.barChart.getContext('2d'), {
       type: 'bar',
       data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: this.propsdata
+        //   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: this.propsdata
       },
       options: {
           scales: {

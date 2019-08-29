@@ -10,7 +10,9 @@
   "dependencies": {
     "chart.js": "^2.8.0",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "highcharts": "^7.1.3",
+    "vue": "^2.6.10",
+    "vue-highcharts": "^0.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
