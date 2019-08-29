@@ -1,7 +1,7 @@
 <template>
   <div>
     <chartjs-view></chartjs-view>
-    <highchart-view></highchart-view>
+    <!-- <highchart-view></highchart-view> -->
   </div>
 </template>
 <script>
