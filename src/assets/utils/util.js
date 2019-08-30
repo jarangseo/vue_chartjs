@@ -2,9 +2,9 @@
 export const util = {
   getRandomData() {
     let chartDataSet = []
-    for(let j = 0; j < 1000; j++) {
-      let chartDataItem = {label: `chart Data Item ${j}`, data: [], backgroundColor: "#"+((1<<24)*Math.random()|0).toString(16)}
-      for (let i = 0; i < 100; i++){
+    for(let j = 0; j < 10; j++) {
+      let chartDataItem = {fill: false, label: `chart Data Item ${j}`, data: [], backgroundColor: "#"+((1<<24)*Math.random()|0).toString(16)}
+      for (let i = 0; i < 10; i++){
         chartDataItem.data.push(Math.random() * 10)
       }
       chartDataSet.push(chartDataItem)

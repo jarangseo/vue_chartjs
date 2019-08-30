@@ -1,5 +1,8 @@
 <template>
-    <canvas id="lineChart" ref="lineChart" width="400" height="400"></canvas>
+    <div>
+        <h1>Line Chart</h1>
+        <canvas id="lineChart" ref="lineChart" width="400" height="400"></canvas>
+    </div>
 </template>
 <script>
 export default {
@@ -21,7 +24,50 @@ export default {
             type: 'line',
             data: {
                 // labels: [],
-                datasets: this.propsdata
+                // datasets: this.propsdata
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes in 2018',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: '# of Votes in 2019',
+                    data: [1,2,3,4,5,6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
             },
             options: {
                 ///Boolean - 차트 눈금 표시 여부 설정
@@ -70,11 +116,11 @@ export default {
                 },
                 animation: {
                     onProgress: function(animation) {
-                        console.log('progress')
+                        console.log('line progress')
                         that.progress = animation.animationObject.currentStep / animation.animationObject.numSteps;
                     },
                     onComplete: function(animation) {
-                        console.log('complete')
+                        console.log('line complete')
                     }
                 }
             }

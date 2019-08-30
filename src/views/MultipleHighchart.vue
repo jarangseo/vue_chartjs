@@ -1,6 +1,10 @@
 <template>
   <div>
-    <highcharts :options="options" ref="highcharts"></highcharts>
+    <div style="display:flex" v-for="item in 30">
+      <highcharts :options="options" ref="highcharts"></highcharts>
+      <highcharts :options="options" ref="highcharts"></highcharts>
+      <highcharts :options="options" ref="highcharts"></highcharts>
+    </div>
   </div>
 </template>
 <script>
